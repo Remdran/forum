@@ -36,6 +36,8 @@
                 </form>
             </div>
         </div>
+    @else
+        <p class="text-center">Please <a href="{{ route ('login') }}">sign in</a> to leave a comment</p>
     @endif
 </div>
 @endsection
