@@ -22,6 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/threads', 'ThreadController@index');
 Route::get('/threads/{channel}/{thread}', 'ThreadController@show');
 Route::get('/threads/create', 'ThreadController@create');
+Route::get('threads/{channel}', 'ThreadController@index');
 // Route::resource('threads', 'ThreadController'); // This is the same as all of the above '/threads/' routes 
 
 Route::post('/threads', 'ThreadController@store');
