@@ -13,9 +13,12 @@
                         {{ $thread->body }}
                     </div>
                 </div>
-            @foreach ($thread->replies as $reply)
+            @foreach ($replies as $reply)
                 @include('threads.reply')
             @endforeach
+
+            {{ $replies->links() }}
+
 
             @if(auth()->check()) <!-- If logged in -->
                 <form method="POST" action="{{ $thread->path() . '/replies' }}">
